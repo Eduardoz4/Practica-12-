@@ -1,0 +1,74 @@
+// Practica 12 
+// Morales Salinas Eduardo     Fecha de entrega: 18/01/2021 
+// Seccion de librerias 
+#include<stdio.h>
+// Hice cada problema como una funcion , para que en un menu se pueda elegir 
+// Ejercicio 1
+double ahorro(){
+int c;
+float d,dm,dtm;
+c=1;
+while(c<=12){
+	printf("\nCuanto quiere depositar este mes, este es el mes %i" ,c);
+	scanf("%f", &d);
+	dm=d+dm;
+	printf ("En este mes ahorraste: %lf", dm);
+	c=c+1;
+}
+dtm=dm;
+printf("\nAhorro anual: %lf", dtm);
+}
+// Ejercicio 2
+int numeros(){
+ 	int c;
+ 	c=0;
+ 	while(c<100){
+ 		c=c+2;
+ 	 printf("\n%i",c);
+ 	 
+	 }
+ }
+ // Ejercicio 3
+ double cantidades(){
+ 	int n,ca,cb,cn;
+	float c;
+	cn=1;
+	ca=0;
+	cb=0;
+	printf("¿Cuantas Cntidadaes deseas evaluar?");
+	scanf("%i", &n);
+	while(cn<=n){
+		printf("Ingresa tu cantidad");
+		scanf("%f", &c);
+		if(c<=0){
+			ca=ca+1;
+			cn=cn+1;
+		}
+		else{
+			cb=cb+1;
+			cn=cn+1;
+		}
+	}
+	printf("El total cantidades menores o iguales a 0 es de: %i", ca);
+	printf("\nEl total cantidades mayores a 0 es de: %i", cb);
+}
+// Parte de las funciones 
+int main (){
+	int op;
+	printf("Hola profesor , aqui estan los programas seleccione cual quiere ejecutar \n");
+	printf("1 Ahorro\n");
+	printf("2 Imprimir los numeros pares del 0 a 100 \n");
+	printf("3 Cantidades iguales o menores a 0 y mayores a 0 \n \n");
+	scanf("%i",&op);
+	switch(op){
+	case 1:
+		ahorro();
+		break;
+	case 2: 
+	    numeros();
+	    break;  
+	case 3:
+		cantidades();
+		break;
+}
+}
